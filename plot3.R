@@ -19,7 +19,7 @@ BaltimoreEmission.aggregate <- aggregate(Emissions ~ year + type,
 ### charge the ggplot2 library
 library(ggplot2)
 ### make the graph
-png(filename='plot3.png')
+png(filename='plot3.png',width=580,height=480,units="px")
 ggplot(BaltimoreEmission.aggregate, aes(x=factor(year), y=Emissions, fill=type)) +
         geom_bar(stat="identity") +
         facet_grid(. ~ type) +
